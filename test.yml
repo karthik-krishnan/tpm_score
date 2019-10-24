@@ -1,0 +1,77 @@
+---
+Developer Experience and Productivity:
+- Developer workstation initial setup
+- Developer workstation setup drift
+- Developer workstation to production parity
+- Integrated Development Environment (IDE)
+- New application starters
+- Production Debugging
+- Test Environments
+- Code Review Strategy
+Build:
+- Continuous Integration
+- Code Standards
+- Static Analysis Tools
+- Local Builds
+- Build Stability
+- Failed Builds
+Testing:
+- Automated Unit Testing
+- Automated Integration Testing
+- Automated Contract Testing
+- Automated Functional Testing
+- Automated Acceptance Testing
+- Performance & Scale Testing [Capacity Testing]
+- Performance & Scale Testing [Load Testing]
+- Performance & Scale Testing [Stress Testing]
+- Performance & Scale Testing [Soak Testing]
+- Performance & Scale Testing [Spike Testing]
+- Performance & Scale Testing [Volume Testing]
+- Performance & Scale Testing [Chaos Testing]
+- Manual Testing
+- Test Data Management
+- Refactoring
+Deployment:
+- Packaging Format
+- Deployment Style
+- Business Continuity (Disaster Recovery)
+- Deployment Frequency
+- Deployment Window
+- Deployment Moratorium
+- Deployment Target Host
+- Datastore Style
+- Application configuration
+- Feature Toggles
+- Release Notes
+API Strategy:
+- API Gateway
+- API Versioning
+- API Documentation
+- API Standards and Style Guides
+Architecture:
+- Architecture Decisions
+- Architecture Conformance
+- Architectural Styles
+- Resilience Patterns [Circuit Breakers]
+- Resilience Patterns [Client-side Load Balancers]
+- Resilience Patterns [Service Discovery]
+- Resilience Patterns [API Fallbacks]
+- Resilience Patterns [Rate Limiting]
+- Resilience Patterns [Throttling]
+- Resilience Patterns [Bulkheads]
+- Resilience Patterns [Timeouts]
+- Resilience Patterns [Caching]
+- Observability Patterns [Log Aggregation]
+- Observability Patterns [Monitoring]
+- Observability Patterns [Distributed Tracing]
+- Observability Patterns [Health Checks]
+- Observability Patterns [Alerting]
+- Observability Patterns [Dashboards]
+Security:
+- Security Testing [Static Analysis Security Testing (SAST)]
+- Security Testing [Dynamic  Analysis Security Testing (DAST)]
+- Security Testing [Interactive  Analysis Security Testing (IAST)]
+- Data at Rest Security
+- Data in Transit Security
+- Authentication & Authorization
+- Secrets Management

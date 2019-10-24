@@ -1,0 +1,77 @@
+{
+    "title": "Technology Platform Maturity Model",
+    "description": "The Capability Maturity Model Integrated (CMMI®) is intended to institutionalize a collection of pre-defined delivery practices and ensure their consistent execution so as to increase the probability that a team or organization can successfully complete projects. The definition of “successful” includes completing the project on time and in budget.\n\nIn contrast, the Technology Platform Maturity Model is a tool to help organizations understand their current technology practices and work toward improving them with the goal of increasing ability to respond to changing business conditions and better harnessing innovation.",
+    "questions": [
+        {
+            "question": "Your Name",
+            "type": "text"
+        }
+    ],
+    "sections": [
+        {
+            "section": "Developer Experience and Productivity",
+            "questions": [
+                {
+                    "question": "Developer workstation initial setup",
+                    "type": "multi_choice",
+                    "options": [
+                        "Is largely ad-hoc, undocumented, manual, and takes several days/weeks to be setup correctly. No two developer workstations are identical in terms of structure.",
+                        "Is largely clear and reasonably well documented, but still requires quite a lot of painful manual setup. Developer workstations more or less identical and can be used by other team members with a little bit of effort.",
+                        "Is clear, well documented and maintained up-to-date. Following a series of mostly manual steps will result in a developer workstation that is mostly identical to another.",
+                        "Is clear, well documented and maintained up-to-date. Some portions of the setup are automated and result in identical workstation station state.",
+                        "Is clear, well documented and almost fully automated. Team members can work on any workstation without any loss in productivity"
+                    ]
+                },
+                {
+                    "question": "Developer workstation setup drift",
+                    "type": "multi_choice",
+                    "options": [
+                        "Is fairly common. Developers have to manually make sure to keep their workstations up to date with the latest security patches, software and tools. Developers are unable to use other team members' workstations for project related work without significant loss of productivity",
+                        "Is fairly common. Security patches and other critical OS level fixes are applied automatically. Developers are responsible to keep project related software and tools up to date themselves. Developers are unable to use other team members' workstations for project related work without significant loss of productivity",
+                        "Is not that common. Teams have word of mouth conventions on where project related software can be found. Getting up to date with the latest software is easy. Developers can use other team members' with minimal loss in productivity.",
+                        "Is uncommon. Automation exists to get up-to-date with most if not all software. Developers can easily work on each others' workstations with almost no loss in productivity.",
+                        "Is alien. Developers use ephemeral workstations with no environment based or personal artifacts being required. Changes to workstation setup are scripted and automated."
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "Build",
+            "questions": [
+                {
+                    "question": "Continuous Integration",
+                    "type": "multi_choice",
+                    "options": [
+                        "Check-ins happen on a long running private branch and remain there until story/feature completion. Integration to the mainline usually takes several weeks or months..",
+                        "Check-ins initially happen on a private branch and remain there for the duration of a development sprint/iteration. Integration to the mainline happens every 2 to 4 weeks.",
+                        "Check-ins and builds happen on a private branch. Features are usually fine grained to finish within a few days. Integration happens every few days.",
+                        "Check-ins and CI happen on a short-lived private branch to satisfy a pull-request workflow. A branch-by-abstraction style is used to turn off incomplete work. Integration is truly continuous.",
+                        "Check-ins and CI happen on the mainline. A branch-by-abstraction style is used to turn off incomplete work. Integration is truly continuous."
+                    ]
+                },
+                {
+                    "question": "Code Standards",
+                    "type": "multi_choice",
+                    "options": [
+                        "There are no formal code standards provided or enforced. Teams are free to use a code formatting tool of their choice if they so wish.",
+                        "There are code standards provided. However, these standards are not actively maintained to keep up with newer language features. Teams use these in an ad-hoc manner.",
+                        "Code standards are provided and actively maintained to keep up with updates to a variety of languages. Teams are encouraged to enforce these rules",
+                        "Code standards are provided and actively maintained. These standards are enforced as part of the build and will result in failures if rules are violated.",
+                        "Code standards are provided and actively maintained. IDE and build support is made available to allow adhering to standards seamlessly."
+                    ]
+                },
+                {
+                    "question": "Static Analysis Tools",
+                    "type": "multi_choice",
+                    "options": [
+                        "There are no formal static analysis prescribed or enforced. Teams are free to use static analysis tools of their choice if they so wish.",
+                        "There are static analysis tools prescribed. However, the rules for these tools are not actively maintained to keep up with newer language and/or library features. Teams use these in an ad-hoc manner.",
+                        "Static analysis tools are prescribed and actively maintained to keep up with updates to a variety of languages and libraries. Teams are encouraged to enforce these rules.",
+                        "Static analysis tools are prescribed and actively maintained. The rules for these tools are enforced as part of the build and will result in failures if rules are violated.",
+                        "Static analysis tools are prescribed and actively maintained. IDE and build support is made available to allow adhering to standards seamlessly."
+                    ]
+                }
+            ]
+        }
+    ]
+}

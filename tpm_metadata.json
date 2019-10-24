@@ -1,0 +1,485 @@
+{
+   "Developer workstation initial setup": [
+      "Is largely ad-hoc, undocumented, manual, and takes several days/weeks to be setup\ncorrectly. No two developer workstations are identical in terms of structure.",
+      "Is largely clear and reasonably well documented, but still requires quite a lot\nof painful manual setup. Developer workstations more or less identical and can be\nused by other team members with a little bit of effort.",
+      "Is clear, well documented and maintained up-to-date. Following a series of mostly\nmanual steps will result in a developer workstation that is mostly identical to\nanother.",
+      "Is clear, well documented and maintained up-to-date. Some portions of the setup\nare automated and result in identical workstation station state.",
+      "Is clear, well documented and almost fully automated. Team members can work on any\nworkstation without any loss in productivity"
+   ],
+   "Developer workstation setup drift": [
+      "Is fairly common. Developers have to manually make sure to keep their workstations\nup to date with the latest security patches, software and tools. Developers are\nunable to use other team members' workstations for project related work without\nsignificant loss of productivity",
+      "Is fairly common. Security patches and other critical OS level fixes are applied\nautomatically. Developers are responsible to keep project related software and tools\nup to date themselves. Developers are unable to use other team members' workstations\nfor project related work without significant loss of productivity",
+      "Is not that common. Teams have word of mouth conventions on where project related\nsoftware can be found. Getting up to date with the latest software is easy. Developers\ncan use other team members' with minimal loss in productivity.",
+      "Is uncommon. Automation exists to get up-to-date with most if not all software.\nDevelopers can easily work on each others' workstations with almost no loss in productivity.",
+      "Is alien. Developers use ephemeral workstations with no environment based or personal\nartifacts being required. Changes to workstation setup are scripted and automated."
+   ],
+   "Developer workstation to production parity": [
+      "Developer workstations have almost no parity with formal/production environments.\nAny testing or verification related activities are almost always required to be\ncompleted in environments external to the developer's workstation.",
+      "Developer workstations have little parity with formal/production environments. However,\nbasic testing. verification related activities can be done on a developer workstation.\nHowever, end-to-end verification is almost always required to be completed in environments\nexternal to the developer's workstation.",
+      "Developer workstations have little parity with formal/production environments. However,\ntesting maturity is high enough to enable most testing, verification related activities\nto be completed on the developer workstation itself. Integration and end-to-end\ntesting still happen on formal environments",
+      "Developer workstations are able to simulate formal/production environments with\nthe help of",
+      "Provisioning of private production-like environments along with test data is scripted.\nEnd-to-end testing is very cheap and easy in terms of effort."
+   ],
+   "Integrated Development Environment (IDE)": [
+      "Developers use an IDE of their choice. Within the same team it is common to have\nteam members use different IDEs. These IDEs are configured in custom ways for code\nformatting, static analysis, security analysis, build settings, etc.",
+      "Developers on the same team use the same IDE. However, there are variations in terms\nfor settings for code formatting, static analysis, security analysis, build settings,\netc.",
+      "Developers are free to use an IDE of their choice. However, settings for code formatting,\nstatic analysis, security analysis, build settings, etc. are shared informally.\nThese settings are also enforced as part of the build.",
+      "Developers are free to use an IDE of their choice. However, settings for static\nanalysis, security analysis, build settings, etc. are shared formally.",
+      "Developers on a team are encouraged to use the same IDE. Settings for code formatting,\nstatic analysis, security analysis, build settings, etc. are shared formally. Furthermore,\nsettings are inherited from a common repository."
+   ],
+   "New application starters": [
+      "Creating new applications requires careful assembly and time from senior members\nof the team. Choice of third party dependencies and their versions is made on a\nad-hoc manner",
+      "Creating new applications is done through copying existing applications and making\nchanges as necessary. While this works most of the time, it results in unexpected\nerrors occasionally.",
+      "Creating new applications is done using standard scaffold creators on the public\ninternet.",
+      "Creating new applications is done using in-house tested extensions derived from\nstandard scaffold creators. Maintaining dependencies and standards after the scaffold\nis created is left to individual teams.",
+      "Creating new applications is done using in-house tested extensions derived from\nstandard scaffold creators. Upgrading to use the latest security patches, library\nversions"
+   ],
+   "Production Debugging": [
+      "Debugging production issues requires special access. Most team members have long\nterm access to production infrastructure to ease diagnosis. Getting such access\nis undocumented and a long drawn process.",
+      "Debugging production issues requires special access. However, the process to request\naccess is well documented.",
+      "Debugging production issues does not require special access to most systems (esp.\nin-house built). These systems make enough observability information to make debugging\neasy without exposing sensitive data.",
+      "Debugging production issues does not require special access to any systems. These\nsystems make enough observability information to make debugging easy without exposing\nsensitive data.",
+      "All teams are actively encouraged to deploy applications that make observability\ninformation available in standard ways. Production debugging of distributed systems\nis very easy through the use of correlation identifiers that span the entire user\nflow."
+   ],
+   "Test Environments": [
+      "There is a single manually provisioned, shared, long running regression test environment\nwhere all sorts of testing happens.",
+      "There are manually provisioned, shared, long running test environments for specific\npurposes e.g. regression, hot fix etc.",
+      "Each team owns a \"dev\" environment where they are able to experiment and deploy\non-demand, in addition to the formal testing environments above.",
+      "Teams are allowed and able to provision ephemeral test environments, but do not\nhave the ability to generate the required test data to execute complex scenarios.\nSuch environments are limited to testing \"simple\" scenarios.",
+      "Teams are allowed and able to provision ephemeral test environments along with the\nnecessary test data required to test complex scenarios."
+   ],
+   "Code Review Strategy": [
+      "No formal or informal code reviews happen. Everyone is expected to know and do the\nright thing.",
+      "Code reviews happen, but they are informal and done on an ad-hoc basis.",
+      "Code reviews happen formally, but most review comments could have been automated.\nSo code reviews usually only result in stylistic improvements, if any.",
+      "Code reviews happen formally, most stylistic comments are taken care of using static\nanalysis tools prior to a human review. Code review comments, however are not preserved\nfor context.",
+      "Code reviews happen formally, most stylistic comments are taken care of using static\nanalysis tools prior to a human review. Code review comments are persisted to provide\ncontext."
+   ],
+   "Continuous Integration": [
+      "Check-ins happen on a long running private branch and remain there until story/feature\ncompletion. Integration to the mainline usually takes several weeks or months..",
+      "Check-ins initially happen on a private branch and remain there for the duration\nof a development sprint/iteration. Integration to the mainline happens every 2 to\n4 weeks.",
+      "Check-ins and builds happen on a private branch. Features are usually fine grained\nto finish within a few days. Integration happens every few days.",
+      "Check-ins and CI happen on a short-lived private branch to satisfy a pull-request\nworkflow. A branch-by-abstraction style is used to turn off incomplete work. Integration\nis truly continuous.",
+      "Check-ins and CI happen on the mainline. A branch-by-abstraction style is used to\nturn off incomplete work. Integration is truly continuous."
+   ],
+   "Code Standards": [
+      "There are no formal code standards provided or enforced. Teams are free to use a\ncode formatting tool of their choice if they so wish.",
+      "There are code standards provided. However, these standards are not actively maintained\nto keep up with newer language features. Teams use these in an ad-hoc manner.",
+      "Code standards are provided and actively maintained to keep up with updates to a\nvariety of languages. Teams are encouraged to enforce these rules",
+      "Code standards are provided and actively maintained. These standards are enforced\nas part of the build and will result in failures if rules are violated.",
+      "Code standards are provided and actively maintained. IDE and build support is made\navailable to allow adhering to standards seamlessly."
+   ],
+   "Static Analysis Tools": [
+      "There are no formal static analysis prescribed or enforced. Teams are free to use\nstatic analysis tools of their choice if they so wish.",
+      "There are static analysis tools prescribed. However, the rules for these tools are\nnot actively maintained to keep up with newer language and/or library features.\nTeams use these in an ad-hoc manner.",
+      "Static analysis tools are prescribed and actively maintained to keep up with updates\nto a variety of languages and libraries. Teams are encouraged to enforce these rules.",
+      "Static analysis tools are prescribed and actively maintained. The rules for these\ntools are enforced as part of the build and will result in failures if rules are\nviolated.",
+      "Static analysis tools are prescribed and actively maintained. IDE and build support\nis made available to allow adhering to standards seamlessly."
+   ],
+   "Local Builds": [
+      "It is not possible to build your application(s) in their entirety on local developer\nworkstations.",
+      "Local builds are possible, but require skipping certain phases in the build, for\ne.g. integration tests.",
+      "Local builds are possible after dependency artifacts have been downloaded and cached\nlocally.",
+      "Local builds before check-in are encouraged, but take a long time to execute successfully.\nFurthermore, successful local builds still require monitoring the build after check-in\nbecause environmental issues are common.",
+      "Local builds before check-in are encouraged, take a small amount of time to execute\nsuccessfully. Successful local builds are a reliable indicator of build quality."
+   ],
+   "Build Stability": [
+      "The build process does not include adequate testing. Builds are stable, but usually\nrequire a significant amount of manual testing to certify quality.",
+      "The build process does include various types of automated testing. But these tests\nare time-consuming and flaky. Hence they require a significant amount of manual\ntesting to certify quality.",
+      "The build process includes a good mix of unit, integration, functional and acceptance\ntests, and these tests are mostly green. However,  a significant amount of manual\ntesting is still needed to certify quality - primarily because of poor visibility\ninto the quality of the tests that run as part of the build.",
+      "The build process includes a good mix of unit, integration, functional and acceptance\ntests, and these tests are mostly green. Additional manual testing is required for\nscenarios not covered through automated testing.",
+      "The build process includes a good mix of unit, integration, contract, functional\nand acceptance tests, and these tests are mostly green. Manual testing only used\nfor exploratory testing."
+   ],
+   "Failed Builds": [
+      "Failed builds remain red for prolonged periods of time. Check-ins on top of failed\nbuilds are fairly common. There is no clear ownership assignment for failed builds..",
+      "Failed builds remain red for prolonged periods of time. Usually someone takes ownership,\nbut fixing red builds takes a long time.",
+      "Failed builds for prolonged periods of time are inevitable. Developers are unable\nto run stages in the pipeline locally and there isn't enough debugging information\nreadily available.",
+      "Failed builds are not that common. But when failures do happen, other team members\nwait for the build to be fixed. Team members avoid checking in on top of a red build.",
+      "Failed builds are not that common. When they do occur, team members are empowered\nto rollback the cause of the build failure if they are not fixed by the owner."
+   ],
+   "Automated Unit Testing": [
+      "Limitations in application design do not allow effective unit testing. Even when\nunit tests are written - it is usually done after the fact and coverage is too low\nfor the process to be effective.",
+      "Unit tests are written, mostly after production code, and coverage is also reasonable,\nbut they are not effective as they don't catch many bugs. Higher, more expensive\nlevels of testing are always required to establish codebase health.",
+      "Unit tests are written, mostly after production code and coverage is also pretty\nhigh. They are reasonably effective in catching a few bugs, but higher levels of\ntesting by a QA team external to the development team is still used to certify application\nfunctionality.",
+      "Unit tests are written, with some tests being written before production code and\ncoverage being pretty high, but the practice is not trusted enough to yield consistent\nbenefits.",
+      "Test-driven development is actively practiced. There is a high level of trust in\nthe unit testing practice. Almost always, most testing is accomplished through unit\ntesting and QA team members verify that required scenarios are covered as opposed\nto duplicating effort in more expensive tests."
+   ],
+   "Automated Integration Testing": [
+      "Integration Testing relies on expensive environment and application dependencies.\nThis makes this class of tests very flaky and ineffective. Consequently, teams use\nthis class of tests very sparingly.",
+      "Integration Testing relies on the creation of mocks and stubs for dependent applications\nand services. While these tests provide some value, changes to dependent implementations\ncause tests to pass while failing when run against real implementations. While this\nreduces the amount of flakiness, it sometimes results in false positives as well.",
+      "Integration Testing relies on a mix of real (for internal) and stubbed (for external)\ndependencies. While this style sometimes provides a reasonable middle ground, investment\nin this class of tests is still not deep, given that they are still expensive to\nset up and run.",
+      "Integration Testing is mostly used as an augment to unit testing with only a few\ntests being written against this class of tests. This provides a happy mix of the\nfaster, less expensive unit tests vs. slower, more expensive integration tests",
+      "Integration Testing relies on a set of mocks provided by the producer of the dependency.\nIn addition to using this as merely an augment to unit tests, it also provides a\ngood amount of reliability when running these tests."
+   ],
+   "Automated Contract Testing": [
+      "Contract tests are written by very few teams, if any, primarily because teams are\ngenerally unaware of this class of tests.",
+      "API contracts are driven primarily by provider teams with little real-world knowledge\nof client team requirements. This means that client teams expend a lot of effort\nwriting transformation, business logic themselves.",
+      "Contract tests are written by client teams against real implementations of providing\nservices. This makes them equivalent to integration tests, reducing their utility\nand efficacy.",
+      "Contract tests are written by client teams and contributed to the producer teams.\nClient teams use these stubs for functional, acceptance and other expensive forms\nof testing. These tests when run successfully in the producer's build pipeline result\nin stubs that the producer team publishes for client teams to use. However, this\npractice is not common yet.",
+      "Contract tests are written by client teams and contributed to the producer teams.\nThese tests when run successfully in the producer's build pipeline result in stubs\nthat the producer team publishes for client teams to use. Client teams use these\nstubs for functional, acceptance and other expensive forms of testing. This is a\nstandard practice across most if not all teams."
+   ],
+   "Automated Functional Testing": [
+      "Automated functional testing is not practiced at all. All functional testing happens\nin the form of manual testing.",
+      "Automated functional testing is practiced sporadically, however a majority of functional\ntesting is manual.",
+      "Automated functional testing is practiced by most teams, however, efficacy is still\nquestionable because these tests are flaky. A round of manual testing always follows\nautomated functional testing to certify build quality.",
+      "Automated functional testing is practiced by most teams, and there is a good level\nof maturity among the teams. However, functional testing does not take into account\nthe amount of testing that may have happened at lower levels. A lot of the functional\ntesting effort could be reduced if more attention was paid to coverage already achieved\nat lower levels of automated testing.",
+      "Automated functional testing is a standard practice for most (if not all) teams.\nAutomated functional testing is reserved only for the most important scenarios and\nmore importantly, only for those scenarios that have not already been tested at\nlower levels of testing."
+   ],
+   "Automated Acceptance Testing": [
+      "Automated acceptance testing is not practiced at all. All acceptance testing happens\nin the form of manual testing.",
+      "Automated functional testing is practiced sporadically, however a majority of acceptance\ntesting is manual.",
+      "Automated acceptance testing is practiced by most teams, however, efficacy is still\nquestionable because these tests are flaky. A round of manual testing always follows\nautomated acceptance testing to certify build quality.",
+      "Automated acceptance testing is practiced by most teams, and there is a good level\nof maturity among the teams. However, acceptance testing does not take into account\nthe amount of testing that may have happened at lower levels. A lot of the acceptance\ntesting effort could be reduced if more attention was paid to coverage already achieved\nat lower levels of automated testing.",
+      "Automated acceptance testing is a standard practice for most (if not all) teams.\nAutomated acceptance testing is reserved only for the most important scenarios and\nmore importantly, only for those scenarios that have not already been tested at\nlower levels of testing."
+   ],
+   "Performance & Scale Testing [Capacity Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Load Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Stress Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Soak Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Spike Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Volume Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Performance & Scale Testing [Chaos Testing]": [
+      "Not practiced",
+      "Practiced, but only on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Manual Testing": [
+      "Manual testing is the primary form of testing used to certify build quality. This\nis time consuming, error-prone, undocumented and mostly ad-hoc.",
+      "Manual testing is the primary form of testing used to certify build quality. Although\ntime consuming and error-prone, test cases and executions are documented.",
+      "Manual testing is used as an augment to other forms of automated testing, however,\nit still remains the primary form of build quality.",
+      "Manual testing is used as an augment to other forms of automated testing. Other\nforms of automated testing are consulted to make sure manual test cases do not repeat\neffort already spent during automated testing.",
+      "Manual testing is used sparingly, only when automated testing is not feasible or\ntoo cumbersome. There are conscious efforts to intentionally increase automation\nall the time."
+   ],
+   "Test Data Management": [
+      "There is no formal test data management strategy in place. Test data is mostly gathered\norganically as a side effect of testing efforts. If the regression test environment\nis lost, significant effort will be needed to restore testing productivity.",
+      "Test data management mostly constitutes copying subsets of production data, which\nis repurposed for testing. However, this test data is not anonymized, so it might\ncontain personally identifiable information.",
+      "Test data management mostly constitutes copying anonymized subsets of production\ndata.",
+      "Test data management constitutes activities such as test case design, test data\npreparation using a combination of data generation script and copying anonymized\nproduction data subsets.",
+      "Test data management constitutes activities such as test case design, test data\npreparation primarily using data generation scripts which are versioned just like\nany other piece of source code. These data generation scripts are used when provisioning\nnew environments or before starting any form of functional, acceptance testing."
+   ],
+   "Refactoring": [
+      "Functional features take too high a priority. There is no time allocated for refactoring.",
+      "Refactoring is encouraged, but is usually deemed too dangerous. Hence very little\nto no refactoring actually occurs.",
+      "Refactoring is encouraged, potential candidates are identified, and the low hanging\nfruit items are dealt with. Larger initiatives are deemed to dangerous and left\nalone.",
+      "Refactoring is encouraged, usually as a task/story distinct from functional development",
+      "Refactoring happens naturally as part of all functional development. Usually, there\nis no need to allocate time specifically for refactoring activities."
+   ],
+   "Packaging Format": [
+      "EAR, WAR style into a shared application container with multiple applications/services\nrunning in the same process space.",
+      "Mutable deployment target with configuration management software e.g. puppet, chef,\netc.",
+      "Immutable, versioned virtual machine(VM) image e.g. VMDK, AMI etc.",
+      "Immutable, versioned container image e.g. docker, rocket etc.",
+      "Versioned compound container image groups e.g. helm, docker-compose etc."
+   ],
+   "Deployment Style": [
+      "Manual with downtime and outage window",
+      "Automated with downtime with outage window",
+      "Automated with zero downtime - blue green",
+      "Automated with zero downtime - rolling or canary",
+      "Automated with zero downtime - combination of blue-green and rolling"
+   ],
+   "Business Continuity (Disaster Recovery)": [
+      "Active passive with MTTR of 24 hours or more",
+      "Active passive with MTTR between 12 and 24 hours",
+      "Active passive with MTTR between 6 and 12 hours",
+      "Active passive with MTTR between 2 to 6 hours",
+      "Active active with zero downtime"
+   ],
+   "Deployment Frequency": [
+      "Monthly or even less frequently",
+      "Weekly or more",
+      "Almost Daily",
+      "Daily",
+      "On-demand, several times a day. Any time functionality is ready and the business\nwants to release it."
+   ],
+   "Deployment Window": [
+      "Deployments can only happen during low traffic \"windows\", because there is downtime\nwhen switching to the new version",
+      "Deployments can only happen during low traffic \"windows\", because of a poor track\nrecord with failed (customer impacting) deployments.",
+      "Deployments can happen anytime during the day, but continue to happen only during\nlow traffic \"windows\" due to inertia.",
+      "Deployments can happen anytime during the day, but continue to happen only during\nspecific times of the day due to a lack of approvers, deployment operations personnel\netc.",
+      "Deployments can and happen anytime during the day. The business/product stakeholder\nis in complete  control of when deployments should happen."
+   ],
+   "Deployment Moratorium": [
+      "There is always an extended, pre-emptive deployment freeze during peak periods (e.g.\nThanksgiving, Christmas etc.) - no negotiations - except in case of critical bug\nfixes or",
+      "There is always an extended, pre-emptive deployment freeze during peak periods,\nbut deployments are possible with proper justifications.",
+      "There are short deployment freeze during peak periods, but these are merely a formality.\nDeployments usually are done as and when necessary.",
+      "There are no deployment freezes at any time of the year. However, deployment frequency\nslows during peak periods due to a lack of availability of key personnel (business\nand operations).",
+      "Teams are free to deploy whenever they wish as long as the product/business team\nmembers are comfortable. Deployment is not a function of IT constraints, simply\na business decision."
+   ],
+   "Deployment Target Host": [
+      "Manually provisioned, long-running bare metal servers.",
+      "Manually provisioned, long-running virtual machine servers.",
+      "Programmatically provisioned, long running, mutable virtual machine servers.",
+      "Programmatically provisioned, ephemeral, immutable virtual machine servers.",
+      "Programmatically provisioned, ephemeral, immutable containers or serverless functions."
+   ],
+   "Datastore Style": [
+      "Shared database server with public access to all schemas",
+      "Shared database server with restricted access to individual schemas",
+      "Shared database server with application access restricted to application owned schema",
+      "Private database server with application access restricted to single application\n- database technology restricted to those currently supportable from an operational\nperspective.",
+      "Private database server with application access restricted to single application\n- use of database technology appropriate for problem is permitted."
+   ],
+   "Application configuration": [
+      "Is embedded within application deployment artifacts for a fixed set of environments.\nNew environment(s) or changes to application configuration require an application\nrebuild.",
+      "Is embedded within application artifacts. Environment specific configuration parameters\ncan be overridden without requiring an application rebuild. However, overrides are\nnot audited. Changes to configuration require an application redeployment.",
+      "Is externalizable from application artifacts. But there is no operationalized mechanism\nto do so. Teams continue to require rebuilds when a change to application configuration\nis required.",
+      "Is externalized from application configuration. Teams making use of externalized\nconfiguration use custom (including homegrown) methods to do so.",
+      "Is externalized from application configuration. All teams use a consistent method\nto make changes to application configuration. All changes are traceable to a source\ncode check-in."
+   ],
+   "Feature Toggles": [
+      "Are not used to turn on/off application functionality dynamically.",
+      "Are embedded within application deployment artifacts. Changes to toggles require\nan application rebuild.",
+      "Are externalized from application deployment artifacts. Individual teams use custom\nmethods to implement toggle functionality. Turning off functionality reliably requires\nintimate knowledge of application internals.",
+      "Are externalized from application deployment artifacts. Teams use a consistent approach\nto toggles, but toggling off functionality still requires knowledge of application\ninternals.",
+      "Are externalized from application deployment artifacts. Toggles are defined at a\nbusiness feature level"
+   ],
+   "Release Notes": [
+      "Release notes are not compiled or shared.",
+      "Release notes are manually compiled on demand for important milestones.",
+      "Release notes are manually compiled before every release.",
+      "A subset of the release notes are compiled as part of the build pipeline.",
+      "All changes and release notes are compiled as part of the build pipeline."
+   ],
+   "API Gateway": [
+      "API gateway is not used as an explicit pattern.",
+      "The use of API gateway is explicitly discouraged to avoid it becoming a home of\nexcessive business logic.",
+      "API Gateway is used as a single entry point for all consumers. It acts as a simple\nproxy for all downstream services and as a switch to enable zero downtime deployments.",
+      "API Gateway is used as a single entry point for all consumers. It is used to expose\ndifferent variations of the same API to different consumers and as a switch to enable\nzero downtime deployments.",
+      "API Gateway is used as a single entry point for all consumers for value added services\nsuch as authentication, authorization and resilience patterns such as circuit breaker,\nrate limiting, throttling etc."
+   ],
+   "API Versioning": [
+      "No explicit strategy is used for API versioning. API Consumers are notified if backwards\nincompatible changes are made and are expected",
+      "API versioning is used very sparingly. In most cases, changes are made in a backwards\ncompatible manner. When backwards incompatible changes are required to be made,\nnew APIs are created.",
+      "URL based API versioning is used at all times. Consumers are expected to include\na version identifier in the request at all times.",
+      "Header-based API versioning is used at all times. Consumers are expected to include\na version identifier in the request at all times.",
+      "Header-based API versioning is used when multiple versions of an API need to co-exist.\nConsumers not including an explicit version identifier are returned responses from\nthe latest version."
+   ],
+   "API Documentation": [
+      "API documentation is largely missing or ignored. API clients are required to consult\nproducers' source code to look for usage patterns.",
+      "API documentation is produced at the start of a project, but is not maintained up-to-date.\nHence is used sparingly by consuming teams.",
+      "API documentation is produced and all efforts are made to keep it up-to-date with\nwith implementation changes. However, documentation does experience drift from implementation\nbecause it is maintained separately from the implementation.",
+      "API documentation is produced and kept in sync with implementation at all times.\nDocumentation and implementation are produced from the same source repository.",
+      "API documentation and examples are produced and kept in sync with implementation\nat all times. Documentation is generated from tests and published as an artifact\nof the build. All documentation is published on a central API management portal\nfor easy discoverability and access."
+   ],
+   "API Standards and Style Guides": [
+      "No explicit API standards are published or prescribed. Individual teams use conventions\nas they see fit.",
+      "API standards are published, but change too often, making adoption a bit of a hit\nor miss for both producers and consumers.",
+      "API standards are published and are stable, but too many competing priorities have\nmeant that adoption has been a hit or miss for both producers and consumers. New\nAPIs follow the style guide pretty accurately.",
+      "API standards are published and are stable. New APIs follow the style guide pretty\naccurately. There is a clear path defined to migrate existing APIs to the new standard.",
+      "API standards are published and are stable. Most (if not all) APIs have adopted\nthe style guide pretty accurately."
+   ],
+   "Architecture Decisions": [
+      "Architecture decisions are made on an ad-hoc basis with individual teams responsible\nfor all major decisions. There is little to no record maintained for decisions made.",
+      "Architecture decisions are made by a central committee outside of the team and pushed\nto teams for adoption.",
+      "Architecture decisions are initiated by teams working on a problem. These decisions\nare reviewed with a central committee to ensure standards are adhered to.",
+      "Architecture decisions are initiated by teams working on a problem. These decisions\nare reviewed with a central committee to ensure standards are adhered to. Decisions\nmade are captured and persisted in a lightweight manner.",
+      "A pattern catalog of historic architecture decisions is consulted prior to large\nprojects/undertakings. Teams works with an embedded representative from an architecture\nforum to expedite decisions from both a domain and technology perspective. These\ndecisions are reviewed with a central committee to ensure standards are adhered\nto. Decisions made are captured and persisted in a lightweight manner."
+   ],
+   "Architecture Conformance": [
+      "The primary means to enforce architecture decisions is through documents and accompanying\nliterature.",
+      "The primary means to enforce architecture decisions is through architecture and\ncode reviews.",
+      "Architecture decisions are enforced through a combination of documentation, reviews\nand static analysis observations.",
+      "Architecture decisions are enforced through a combination of documentation, reviews\nstatic analysis observations. In addition, some architecture decisions are enforced\nusing a set of fitness functions that are integrated as part of the build.",
+      "Architecture decisions are enforced through a combination of documentation, reviews\nstatic analysis observations. In addition, a majority of architecture decisions\nare enforced using a set of fitness functions that are integrated as part of the\nbuild."
+   ],
+   "Architectural Styles": [
+      "Big Ball of Mud Monolith",
+      "Structured Monolith",
+      "Service Oriented Microservices",
+      "Event-Driven Microservices",
+      "Serverless Functions"
+   ],
+   "Resilience Patterns [Circuit Breakers]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Client-side Load Balancers]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Service Discovery]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [API Fallbacks]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Rate Limiting]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Throttling]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Bulkheads]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Timeouts]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Resilience Patterns [Caching]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested for meeting SLAs"
+   ],
+   "Observability Patterns [Log Aggregation]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Observability Patterns [Monitoring]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Observability Patterns [Distributed Tracing]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Observability Patterns [Health Checks]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Observability Patterns [Alerting]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Observability Patterns [Dashboards]": [
+      "Not used",
+      "Used sporadically by individual teams",
+      "Pattern documented, with varying implementation",
+      "Implementation standardized",
+      "Tested to meet SLAs"
+   ],
+   "Security Testing [Static Analysis Security Testing (SAST)]": [
+      "Not practiced",
+      "Practiced, on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Security Testing [Dynamic  Analysis Security Testing (DAST)]": [
+      "Not practiced",
+      "Practiced, on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Security Testing [Interactive  Analysis Security Testing (IAST)]": [
+      "Not practiced",
+      "Practiced, on an ad-hoc basis",
+      "Practiced, but only before significant milestones (like a large cross-functional\nrelease)",
+      "Practiced periodically, but not part of the pipeline",
+      "Practiced consistently and automated as part of the pipeline"
+   ],
+   "Data at Rest Security": [
+      "Data stored at rest is stored in human readable form.",
+      "Most data stored at rest is stored in human readable form. However, sensitive pieces\nof information are encrypted before they are written to disk. Teams are required\nto make encryption library choices on a case-by-case basis.",
+      "Most data stored at rest is stored in human readable form. However, sensitive pieces\nof information are encrypted before they are written to disk. Encryption libraries\nare standardized across teams.",
+      "Data stored at rest is encrypted before it is written to disk. Responsibility for\nkey management is an individual team responsibility.",
+      "Data stored at rest is encrypted before it is written to disk. Responsibility for\nkey management is standardized across all applications and provided as part of the\ninfrastructure."
+   ],
+   "Data in Transit Security": [
+      "Data transmitted over the wire is neither encoded not encrypted.",
+      "Data transmitted over the wire is encrypted for services exposed to the public internet.\nInternal services are not encrypted yet.",
+      "Data transmitted over the wire is encrypted for all services without exception using\nstandard methods such as TLS.",
+      "Data transmitted over the wire is encrypted for all services without exception.\nKey and certificate management is a team responsibility.",
+      "Data transmitted over the wire is encrypted for all services without exception.\nKey and certificate management is provided by the infrastructure."
+   ],
+   "Authentication & Authorization": [
+      "Authentication and authorization between services and applications is not mandatory.",
+      "Both authentication and authorization are a team responsibility. In addition, authentication\nand authorization methods are a team responsibility.",
+      "Both authentication and authorization are a team responsibility. The exact methods\nfor authentication and authorization are standardized, but individual teams are\nresponsible for implementation.",
+      "Both authentication and authorization is a centrally provided capability. The exact\nmethods for authentication and authorization are standardized, but individual teams\nare responsible for implementation.",
+      "Authentication is a centrally provided, standardized capability. However, authorization\nis an individual service responsibility. The exact methods for authentication and\nauthorization are standardized, but individual teams are responsible for implementation."
+   ],
+   "Secrets Management": [
+      "Secrets are embedded within application deployment artifacts and are managed manually.",
+      "Secrets are externalized from application deployment artifacts, but are managed\nmanually.",
+      "Secrets are externalized from application deployment artifacts, with encrypted secrets\nbeing stored in source control.",
+      "Secrets are externalized from application deployment artifacts, with encrypted secrets\nbeing stored in a configuration management system.",
+      "Secrets are externalized from application deployment artifacts, with encrypted secrets\nbeing stored in a secrets management server."
+   ]
+}
